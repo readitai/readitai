@@ -1,0 +1,24 @@
+inputfile:
+  path: inputs/Frankenstein/Frankenstein_MaryShelley.epub
+  type: epub
+  book_name: Frankenstein
+  author: Mary Shelley
+  narrator: Readit AI
+
+outputfile:
+  dir: outputs/
+  name: Frankenstein
+  subdir_audio: audiobook_gcwavenet
+  use_exist_text: True
+
+speech:
+  read: True
+  tech: gc_wavenet
+  params:
+    credential: credentials/tts_test_lrhc.json
+    sent_batchsize: 5
+
+param_epub:
+  cut_start: 3
+  cut_end: 1
+

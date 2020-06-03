@@ -1,0 +1,25 @@
+inputfile:
+  path: inputs/Dorian_Gray/The Picture of Dorian Gray, by Oscar Wilde.htm
+  type: html
+  book_name: The Picture of Dorian Gray
+  author: Oscar Wilde
+  narrator: Readit AI
+
+outputfile:
+  dir: outputs/
+  name: Dorian_Gray
+  subdir_audio: audiobook_gcwavenet
+  use_exist_text: True
+
+speech:
+  read: True
+  tech: gc_wavenet
+  params:
+    credential: credentials/tts_test_lrhc.json
+    sent_batchsize: 5
+
+param_html:
+  cut_start: 1
+  cut_end: 0
+  split_regex: (</a>CHAPTER [A-Z]{1,5}</h3>)
+

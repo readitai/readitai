@@ -1,0 +1,25 @@
+inputfile:
+  path: inputs/The_Time_Machine/The_Time_Machine_HGWells.htm
+  type: html
+  book_name: The Time Machine
+  author: H. G. Wells
+  narrator: Readit AI
+
+outputfile:
+  dir: outputs/
+  name: The_Time_Machine
+  subdir_audio: audiobook_gcwavenet
+  use_exist_text: True
+
+speech:
+  read: False
+  tech: gc_wavenet
+  params:
+    credential: credentials/tts_test_lrhc.json
+    sent_batchsize: 5
+
+param_html:
+  cut_start: 1
+  cut_end: 0
+  split_regex: <p><a name="chap[0-9]{2,2}"></a></p>
+
